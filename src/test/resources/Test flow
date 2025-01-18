@@ -1,0 +1,21 @@
+#scenario 1
+https://www.saucedemo.com/
+Login with valid credential
+Land to home page
+#validation check for home page
+Add to cart "Bike light" and "Bolt t-shirt"
+Go to cart
+# check both are available in cart page
+Remove "Bolt t-shirt" from cart
+# check bolt t-shirt is removed
+Click on "continue shopping" to land on home page
+# check page title
+Add "Fleece jacket"
+# check
+Go to cart
+# note down the price
+Click "checkout"
+Fill details in checkout page
+# check price added up in total
+Click finish to complete order
+# validate success message
