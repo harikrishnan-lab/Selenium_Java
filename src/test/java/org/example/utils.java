@@ -11,8 +11,8 @@ import java.time.Duration;
 import java.util.Properties;
 
 public class utils {
-    WebDriver driver;
-    String thankyouText;
+    public WebDriver driver;
+    public String thankyouText;
     Properties p;
     public void initBrowser(){
         driver = new ChromeDriver();
@@ -42,5 +42,8 @@ public class utils {
     }
     public void enterText(WebElement elementLocator, String text){
         elementLocator.sendKeys(text);
+    }
+    public void clickOnElement(WebElement elementLocator){
+        elementLocator.click();
     }
 }

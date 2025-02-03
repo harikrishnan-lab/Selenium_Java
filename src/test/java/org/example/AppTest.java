@@ -1,15 +1,5 @@
 package org.example;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.time.Duration;
-import java.util.Properties;
 
 public class AppTest extends utils{
 WebElement element;
@@ -34,7 +24,7 @@ WebElement element;
         //////////////////////////////
         launchUrl("https://www.saucedemo.com/");
 
-        //elementLocator("id","user-name").sendKeys("standard_user");
+        elementLocator("id","user-name").sendKeys("standard_user");
         elementLocator("id","password").sendKeys("secret_sauce");
         elementLocator("id","login-button").click();
         elementLocator("id","add-to-cart-sauce-labs-bike-light").click();
