@@ -10,7 +10,7 @@ import java.time.Duration;
 import java.util.Properties;
 
 public class SeleniumUtils {
-    private static WebDriver driver;
+    public static WebDriver driver;
     private static Properties properties;
     public static void initialiseDriver() {
         String browser = getPropertyValue("browser");
@@ -56,6 +56,9 @@ public class SeleniumUtils {
 
     public static void clickElement(By locator) {
         driver.findElement(locator).click();
+    }
+    public static WebElement getElement(By locator) {
+        return driver.findElement(locator);
     }
 
 }

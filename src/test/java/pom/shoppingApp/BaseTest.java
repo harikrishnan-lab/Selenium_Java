@@ -1,14 +1,26 @@
 package pom.shoppingApp;
 
 import Utility.SeleniumUtils;
-import pom.shoppingApp.pageclass.LoginPage;
+import org.openqa.selenium.WebDriver;
+import pom.shoppingApp.pageclass.*;
 
-
-public class BaseTest {
+public class BaseTest extends SeleniumUtils {
     LoginPage loginPage;
-public void setUp(){
+    ProductsPage productsPage;
+    CartPage cartPage;
+    CheckoutPage checkoutPage;
+    InvoicePage invoicePage;
+    public void setUp(){
     loginPage = new LoginPage();
-    SeleniumUtils.initialiseDriver();
-    SeleniumUtils.launchUrl();
+    productsPage = new ProductsPage();
+    cartPage = new CartPage();
+    checkoutPage = new CheckoutPage();
+    invoicePage = new InvoicePage();
+    initialiseDriver();
+    launchUrl();
 }
+    public void closeBrowser(){
+        driver.close();
+        driver.quit();
+    }
 }
